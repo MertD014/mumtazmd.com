@@ -1,0 +1,185 @@
+/* Reset default styles */
+body,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: #333;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.nav-main ul li {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.nav-main ul li :hover {
+  opacity: 80%;
+}
+
+.nav-main ul li :active {
+  opacity: 60%;
+}
+
+nav {
+  justify-self: center;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-self: center;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(236, 115, 45);
+  font-size: 25px;
+  font-weight: bold;
+  inline-size: auto;
+}
+
+main {
+  display: flex;
+  background-image: linear-gradient(92.83deg, #777777 0, #494949 100%);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Align content to the left */
+  text-align: left;
+  height: 94.72vh;
+}
+
+.welcome {
+  opacity: 0.7;
+  margin-bottom: 20px;
+  margin-left: 50px;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  font-size: 1.5rem;
+  opacity: 0.7;
+}
+
+/*below this is button related*/
+main div a {
+  text-decoration: none;
+  color: rgb(236, 115, 45);
+}
+
+.whoami {
+  position: fixed;
+  width: auto;
+  height: auto;
+  bottom: 10%;
+  align-self: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  background-clip: padding-box;
+  background-color: initial;
+  color: gray;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  overflow: visible; /*look here*/
+  pointer-events: auto;
+  padding: 19px 26px;
+
+  touch-action: manipulation;
+  word-break: keep-all;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .whoami {
+    padding: 19px 32px;
+  }
+}
+
+.whoami:before {
+  background-color: rgba(243, 106, 27, 0.5);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+  border-radius: 80px;
+}
+
+.whoami:after {
+  background-color: initial;
+  background-image: linear-gradient(92.83deg, #666666 0, #494949 100%);
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+  border-radius: 80px;
+}
+
+.whoami:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+}
+
+.whoami:active:not(:disabled) {
+  color: #ccc;
+}
+
+.whoami:active:not(:disabled):after {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    linear-gradient(92.83deg, #666666 0, #494949 100%);
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+}
+
+.whoami:disabled {
+  cursor: default;
+  opacity: 0.24;
+}
