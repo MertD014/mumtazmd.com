@@ -1,0 +1,50 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0; /* Light gray background */
+  font-family: 'Poppins', sans-serif; /* Consistent font */
+  margin: 0;
+  flex-direction: column; /* Stack elements vertically */
+}
+
+.game-wrapper {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.score-board {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+#gameCanvas {
+  border: 3px solid #333;
+  background-color: #e0f2e9; /* Light green background for canvas */
+  display: block; /* Remove extra space below canvas */
+  margin: 0 auto; /* Center canvas */
+}
+
+.game-over-message {
+  margin-top: 15px;
+  font-size: 1.3em;
+  color: #dc3545; /* Red color for game over */
+  font-weight: bold;
+}
+
+.instructions {
+  margin-top: 15px;
+  color: #6c757d; /* Gray color for instructions */
+  font-size: 0.9em;
+}
