@@ -1,0 +1,116 @@
+body {
+  font-family: 'Roboto', sans-serif; /* Match main site font */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f9fa; /* Light background like main site */
+  color: #343a40;
+  margin: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.game-container {
+  background-color: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif; /* Match main site heading font */
+  color: #007bff; /* Use primary color from main site */
+  margin-bottom: 1.5rem;
+}
+
+.emoji-display {
+  font-size: 3.5rem; /* Large emojis */
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  min-height: 60px; /* Ensure space even if emojis load slow */
+}
+
+.input-area {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+  display: block; /* Ensure it takes its own line */
+}
+
+#guess-input {
+  padding: 0.7rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 80%;
+  max-width: 300px;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+#submit-guess {
+  padding: 0.7rem 1.5rem;
+  background-color: #007bff; /* Primary button color */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#submit-guess:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.feedback {
+  min-height: 1.5em; /* Reserve space for feedback */
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.feedback.correct {
+  color: #28a745; /* Green for correct */
+}
+
+.feedback.incorrect {
+  color: #dc3545; /* Red for incorrect */
+}
+
+.score-display {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #495057;
+}
+
+#score {
+  font-weight: 700;
+}
+
+/* Basic responsiveness */
+@media (max-width: 480px) {
+  .game-container {
+    padding: 1.5rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  .emoji-display {
+    font-size: 3rem;
+  }
+  #guess-input {
+    width: 100%;
+  }
+}
