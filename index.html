@@ -1,36 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Mumtaz M.D. (testing)</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./CSS/style.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./JS/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mümtaz Mert Demir - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
-
   <body>
     <header>
-      <nav class="nav-main">
-        <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./HTML/about.html">About</a></li>
-          <li><a href="./HTML/services.html">Services</a></li>
-          <li><a href="./HTML/blog.html">Blog</a></li>
-          <li><a href="./HTML/contact.html">Contact</a></li>
-        </ul>
+      <nav class="navbar">
+        <div class="container">
+          <a href="#" class="nav-logo">Mümtaz Mert Demir</a>
+          <ul class="nav-menu">
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+            <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+            <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+            <li class="nav-item"><a href="#awards" class="nav-link">Awards</a></li>
+            <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
       </nav>
     </header>
 
     <main>
-      <div class="welcome">
-        <h1 class="welcome-ip">Welcome!</h1>
+      <section id="about" class="section about-section">
+        <div class="container content-section">
+          <h2>About Me</h2>
+          <p>
+            Hello! I'm Mert, a passionate developer and engineering student based in İzmir, Türkiye. My primary
+            interests lie in the field of automation. Thanks to the educational opportunities I've pursued, I've
+            developed a solid background in programming and creative problem-solving. I enjoy creating interactive and
+            engaging experiences on the web and beyond.
+          </p>
+          <p>
+            Over the past few years, I've actively participated in numerous competitions within the robotics and
+            programming domains. Looking ahead, I aim to deepen my expertise in these areas, as well as learning about
+            new areas like machine vision and image processing and cloud architecture. This portfolio showcases some of
+            my work and skills. Feel free to explore!
+          </p>
+        </div>
+      </section>
 
-        <p class="subtitle">Don't wait there. Explore the page.</p>
-      </div>
-      <div class="whoami">
-        <a href="./HTML/about.html">Who am I?</a>
-      </div>
+      <section id="education" class="section education-section">
+        <div class="container">
+          <h2>Education</h2>
+          <ul class="timeline">
+            <li class="timeline-item">
+              <span class="timeline-date">2022 - Present</span>
+              <h3 class="timeline-title">B.Sc. Electronics and Communication Engineering</h3>
+              <span class="timeline-subtitle">İzmir Institute of Technology (IZTECH), İzmir, Turkey</span>
+              <div class="timeline-content">
+                <p>Actively involved in HSD, Software, and Chess societies as a board member.</p>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <span class="timeline-date">2023</span>
+              <h3 class="timeline-title">GEA Graduate Program</h3>
+              <span class="timeline-subtitle">GEA (Remote)</span>
+              <div class="timeline-content">
+                <p>
+                  Completed courses covering HR, Sales, Marketing, Brand Management, Software Technologies, AI, Digital
+                  & Influencer Marketing, and Entrepreneurship.
+                </p>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <span class="timeline-date">2023</span>
+              <h3 class="timeline-title">Robotics Instructor Training</h3>
+              <span class="timeline-subtitle">IZELMAN Robotics, İzmir, Turkey </span>
+              <div class="timeline-content">
+                <p>Received training to become a LEGO and Arduino robotics instructor.</p>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <span class="timeline-date">2019 - 2022</span>
+              <h3 class="timeline-title">Deneyap Technology Workshops Graduate</h3>
+              <span class="timeline-subtitle">T3 Foundation, İzmir, Turkey</span>
+              <div class="timeline-content">
+                <p>
+                  Completed extensive courses and developed projects in 10+ subjects including advanced robotics, AI,
+                  nanotechnology, and space/aviation technologies.
+                </p>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <span class="timeline-date">2018 - 2022</span>
+              <h3 class="timeline-title">High School Diploma</h3>
+              <span class="timeline-subtitle">İzmir Fen Lisesi, İzmir, Turkey </span>
+              <div class="timeline-content">
+                <p>
+                  Focused on computer science algorithms, data structures, C, and C++ alongside the standard curriculum.
+                  Served as captain of the informatics olympiad team.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="experience" class="section experience-section">
+        <div class="container">
+          <h2>Experience</h2>
+          <ul class="timeline">
+            <li class="timeline-item">
+              <span class="timeline-date">Aug 2023 - Oct 2023</span>
+              <h3 class="timeline-title">Cinema Team Member</h3>
+              <span class="timeline-subtitle">Paribu Cineverse, İzmir, Turkey </span>
+              <div class="timeline-content">
+                <ul>
+                  <li>Managed ticket and snack sales.</li>
+                  <li>Contributed to increasing the sale of promotional products.</li>
+                  <li>Organized and planned the restocking of goods.</li>
+                </ul>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <span class="timeline-date">Apr 2023 - May 2023</span>
+              <h3 class="timeline-title">Robotics Instructor (Voluntary)</h3>
+              <span class="timeline-subtitle">IZELMAN Robotics, İzmir, Turkey </span>
+              <div class="timeline-content">
+                <ul>
+                  <li>Taught robotics and algorithm design basics to students aged 11-13.</li>
+                  <li>Designed competitions to reinforce learning.</li>
+                  <li>Assessed students' problem-solving abilities with given resources.</li>
+                </ul>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <span class="timeline-date">Apr 2024 - June 2024</span>
+              <h3 class="timeline-title">Material Science and Nanotechnology Instructor</h3>
+              <span class="timeline-subtitle">Deneyap</span>
+              <div class="timeline-content">
+                <p>Taught high school students about material properties and the effects of structure.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projects" class="section projects-section">
+        <div class="container">
+          <h2>My Projects</h2>
+          <div class="project-grid">
+            <div class="project-card">
+              <img src="images/placeholder_garden.png" alt="Chrono-Gardener Thumbnail" class="project-thumbnail" />
+              <h3>Chrono-Gardener</h3>
+              <p class="project-description">
+                A relaxing simulation game where plants grow based on real-world time. Built with Vanilla JS and HTML
+                Canvas.
+              </p>
+              <div class="project-links">
+                <a href="chrono-gardener/game.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer"
+                  >Live Demo</a
+                >
+                <a
+                  href="[Link to Chrono-Gardener Code on GitHub]"
+                  class="btn btn-secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Code</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="images/placeholder_words.png" alt="Semantic Shift Thumbnail" class="project-thumbnail" />
+              <h3>Semantic Shift</h3>
+              <p class="project-description">
+                A word ladder puzzle with dynamic visual feedback based on word meaning. Uses a client-side dictionary.
+              </p>
+              <div class="project-links">
+                <a href="semantic-shift/game.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer"
+                  >Live Demo</a
+                >
+                <a
+                  href="[Link to Semantic Shift Code on GitHub]"
+                  class="btn btn-secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Code</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="images/placeholder_emoji.png" alt="Emoji Geo-Guesser Thumbnail" class="project-thumbnail" />
+              <h3>Emoji Geo-Guesser</h3>
+              <p class="project-description">
+                Test your geography knowledge by guessing locations from emoji clues. Implemented with HTML/CSS/JS.
+              </p>
+              <div class="project-links">
+                <a href="emoji-geo-guesser/game.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer"
+                  >Live Demo</a
+                >
+                <a
+                  href="[Link to Emoji Geo-Guesser Code on GitHub]"
+                  class="btn btn-secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Code</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="images/placeholder_router.png" alt="Resource Router Thumbnail" class="project-thumbnail" />
+              <h3>Resource Router</h3>
+              <p class="project-description">
+                A minimalist puzzle/strategy game about guiding resources. Focuses on logic and spatial planning.
+              </p>
+              <div class="project-links">
+                <a href="resource-router/game.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer"
+                  >Live Demo</a
+                >
+                <a
+                  href="[Link to Resource Router Code on GitHub]"
+                  class="btn btn-secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Code</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="images/placeholder_ascii.png" alt="Ascii Arena Thumbnail" class="project-thumbnail" />
+              <h3>Ascii Arena</h3>
+              <p class="project-description">
+                A retro top-down arcade shooter rendered entirely with text characters. Fun with basic collision
+                detection.
+              </p>
+              <div class="project-links">
+                <a href="ascii-arena/game.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer"
+                  >Live Demo</a
+                >
+                <a
+                  href="[Link to Ascii Arena Code on GitHub]"
+                  class="btn btn-secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Code</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="awards" class="section awards-section">
+        <div class="container">
+          <h2>Awards & Achievements</h2>
+          <ul class="timeline">
+            <li class="timeline-item">
+              <span class="timeline-date">2024</span>
+              <h3 class="timeline-title">Robotex International Semi-Finalist (Water Rally)</h3>
+              <span class="timeline-subtitle">Robotex, Estonia </span>
+              <div class="timeline-content">
+                <p>Competed in obstacle avoidance for water vehicles, reaching the world semi-finals.</p>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <span class="timeline-date">2024</span>
+              <h3 class="timeline-title">BTK Huawei Coding Marathon Finalist (10th Place)</h3>
+              <span class="timeline-subtitle">Huawei & BTK </span>
+              <div class="timeline-content">
+                <p>
+                  Led team EQLOUD to develop a cloud-based, AI-assisted mentoring mobile app using Huawei cloud
+                  services, Flutter, and open-source LLMs. Placed 10th out of 500+ applications.
+                </p>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <span class="timeline-date">2024</span>
+              <h3 class="timeline-title">Teknofest Smart Wi-Fi Coverage Competition (10th Place)</h3>
+              <span class="timeline-subtitle">Teknofest</span>
+              <div class="timeline-content">
+                <p>
+                  Developed a C program to determine optimal Wi-Fi access point locations based on LiDAR scans,
+                  including 2D visualization output.
+                </p>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <span class="timeline-date">2023</span>
+              <h3 class="timeline-title">Teknofest Ideathon (5th Place)</h3>
+              <span class="timeline-subtitle">Teknofest </span>
+              <div class="timeline-content">
+                <p>Acted as advisor for a student team, achieving 5th place among hundreds of participants.</p>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <span class="timeline-date">2023</span>
+              <h3 class="timeline-title">Robotex Folkrace Advanced (1st Place - Turkey)</h3>
+              <span class="timeline-subtitle">Robotex Turkey</span>
+              <div class="timeline-content">
+                <p>
+                  Led team to 1st place in Turkey designing an autonomous driving car using Arduino Mega, L298N drivers,
+                  and custom load balancing code for 4 motors.
+                </p>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <span class="timeline-date">2023</span>
+              <h3 class="timeline-title">Teknofest Flying Car Competition (5th Place Overall)</h3>
+              <span class="timeline-subtitle">Teknofest</span>
+              <div class="timeline-content">
+                <p>
+                  Designed a self-optimizing air traffic control system, achieving 2nd place in ROS-based simulation and
+                  5th place overall.
+                </p>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <span class="timeline-date">2022</span>
+              <h3 class="timeline-title">Robotex International Qualifier (1st Place - Turkey)</h3>
+              <span class="timeline-subtitle">Robotex Turkey</span>
+              <div class="timeline-content">
+                <p>
+                  Designed a remote-controlled robot for load transportation, achieving 1st place in Turkey and
+                  qualifying for the international competition in Estonia.
+                </p>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <span class="timeline-date">2021</span>
+              <h3 class="timeline-title">Codefest (5th Place)</h3>
+              <span class="timeline-subtitle">Codefest</span>
+              <div class="timeline-content">
+                <p>
+                  Contributed to team's 5th place finish by extracting a secret key from an .exe file using a
+                  disassembler.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="skills" class="section skills-section">
+        <div class="container content-section">
+          <h2>Skills</h2>
+          <ul class="skills-list">
+            <li>C / C++</li>
+            <li>Git & GitHub</li>
+            <li>Verilog</li>
+            <li>Competitive Programming</li>
+            <li>Algorithms & Data Structures</li>
+            <li>MATLAB</li>
+            <li>MS Office</li>
+            <li>Problem Solving</li>
+            <li>Robotics</li>
+            <li>Arduino</li>
+            <li>Cloud Services (Huawei Cloud)</li>
+            <li>Image Processing</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="container content-section">
+          <h2>Get In Touch</h2>
+          <p>Interested in collaborating, have a question, or just want to connect? Feel free to reach out!</p>
+          <ul class="contact-links">
+            <li><a href="mailto:mumtazmertdemir@gmail.com">Email</a></li>
+            <li><a href="https://github.com/MertD014" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li>
+              <a href="https://www.linkedin.com/in/mumtaz-mert-demir/" target="_blank" rel="noopener noreferrer"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Mümtaz Mert Demir. Built with HTML, CSS, and JavaScript.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Simple script for active nav link highlighting
+      const navLinks = document.querySelectorAll('.nav-link')
+      const sections = document.querySelectorAll('section[id]')
+
+      function changeActiveLink() {
+        let index = sections.length
+
+        while (--index && window.scrollY + 100 < sections[index].offsetTop) {}
+
+        navLinks.forEach(link => link.classList.remove('active'))
+        if (navLinks[index]) {
+          navLinks[index].classList.add('active')
+        }
+      }
+      changeActiveLink()
+      window.addEventListener('scroll', changeActiveLink)
+
+      const hamburger = document.querySelector('.hamburger')
+      const navMenu = document.querySelector('.nav-menu')
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active')
+        navMenu.classList.toggle('active')
+      })
+
+      document.querySelectorAll('.nav-link').forEach(n =>
+        n.addEventListener('click', () => {
+          hamburger.classList.remove('active')
+          navMenu.classList.remove('active')
+        })
+      )
+    </script>
   </body>
 </html>

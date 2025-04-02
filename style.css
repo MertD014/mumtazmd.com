@@ -1,0 +1,521 @@
+/* Basic Reset & Font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Smooth scrolling for nav links */
+  scroll-padding-top: 75px; /* Offset for fixed navbar */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.7;
+  background-color: #f8f9fa;
+  color: #343a40;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 95%;
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* Slightly increased shadow */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem; /* Slightly larger logo */
+  font-weight: 700;
+  color: #007bff; /* Updated primary color */
+  text-decoration: none;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem; /* Increased gap */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding-bottom: 5px; /* Space for border */
+  border-bottom: 2px solid transparent; /* Prepare for hover effect */
+}
+
+.nav-link:hover,
+.nav-link.active {
+  /* Style for active link */
+  color: #007bff; /* Updated primary color */
+  border-bottom-color: #007bff; /* Underline on hover/active */
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+/* --- Main Content & Sections --- */
+main {
+  flex-grow: 1;
+  margin-top: 75px; /* Adjust based on navbar height */
+}
+
+.section {
+  padding: 4.5rem 0; /* Increased vertical padding */
+}
+
+.section h2 {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin-bottom: 3.5rem; /* Increased space below heading */
+  font-size: 2.8rem; /* Larger headings */
+  color: #333;
+  font-weight: 600;
+  position: relative;
+  display: inline-block; /* Allow positioning */
+  padding-bottom: 0.5rem;
+}
+
+/* Underline effect for headings */
+.section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px; /* Width of the underline */
+  height: 3px; /* Thickness of the underline */
+  background-color: #007bff; /* Primary color */
+  border-radius: 2px;
+}
+
+/* Alternating Backgrounds */
+.about-section,
+.skills-section,
+.awards-section {
+  /* Added awards */
+  background-color: #f8f9fa; /* Default light background */
+}
+
+.projects-section,
+.education-section, /* Added education */
+.experience-section, /* Added experience */
+.contact-section {
+  background-color: #ffffff; /* White background */
+}
+
+/* Specific Section Content Styling */
+.content-section {
+  max-width: 850px; /* Slightly wider content */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem; /* More space between paragraphs */
+  color: #555;
+  text-align: left; /* Left-align about text */
+}
+
+.about-section p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* --- Projects Grid --- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); /* Slightly larger min card width */
+  gap: 2.5rem; /* More space between cards */
+}
+
+.project-card {
+  background-color: #ffffff;
+  border-radius: 10px; /* More rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07); /* Adjusted shadow */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+  border: 1px solid #e9ecef; /* Slightly darker border */
+}
+
+.project-card:hover {
+  transform: translateY(-6px); /* Slightly more lift */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-thumbnail {
+  width: 100%;
+  height: 190px; /* Increased image height */
+  object-fit: cover;
+  display: block;
+  background-color: #e0e0e0;
+}
+
+.project-card h3 {
+  font-family: 'Poppins', sans-serif;
+  margin: 1.2rem 1.5rem 0.6rem;
+  color: #007bff; /* Use primary color for project titles */
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.project-description {
+  font-size: 0.98rem;
+  color: #555;
+  padding: 0 1.5rem;
+  margin-bottom: 1.2rem;
+  flex-grow: 1;
+}
+
+.project-links {
+  padding: 0 1.5rem 1.5rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem; /* Slightly larger buttons */
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.25s ease; /* Smooth transition for all properties */
+  text-align: center;
+  border: 1px solid transparent; /* Prepare for border */
+}
+
+.btn-primary {
+  background-color: #007bff; /* Primary action color */
+  color: #ffffff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  border-color: #0056b3;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #17a2b8; /* Teal color for secondary button text */
+  border-color: #17a2b8; /* Teal border */
+}
+
+.btn-secondary:hover {
+  background-color: #17a2b8; /* Teal background on hover */
+  color: #ffffff;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* --- Skills List --- */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem; /* More space between skills */
+}
+
+.skills-list li {
+  background-color: #e2e6ea; /* Slightly different badge background */
+  color: #495057;
+  padding: 0.6rem 1.2rem; /* Larger badges */
+  border-radius: 25px;
+  font-size: 1rem; /* Slightly larger font */
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  transition: background-color 0.2s ease;
+}
+
+.skills-list li:hover {
+  background-color: #ced4da; /* Darken badge on hover */
+}
+
+/* --- Education, Experience, Awards Sections --- */
+.timeline {
+  list-style: none;
+  padding: 1rem 0;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Vertical line for timeline */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px; /* Position line to the left */
+  width: 3px;
+  background-color: #e9ecef; /* Light line color */
+  border-radius: 2px;
+}
+
+.timeline-item {
+  margin-bottom: 2.5rem; /* Space between items */
+  position: relative;
+  padding-left: 50px; /* Space for icon/dot */
+}
+
+/* Dot on the timeline */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 12px; /* Align with the line */
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  background-color: #ffffff; /* White background for dot */
+  border: 3px solid #007bff; /* Primary color border */
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-date {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6c757d; /* Gray for date */
+  margin-bottom: 0.3rem;
+}
+
+.timeline-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #343a40; /* Dark title */
+  margin-bottom: 0.5rem;
+}
+
+.timeline-subtitle {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #495057; /* Slightly lighter subtitle */
+  margin-bottom: 0.8rem;
+}
+
+.timeline-content p,
+.timeline-content ul {
+  font-size: 0.98rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+.timeline-content ul {
+  padding-left: 20px;
+}
+.timeline-content ul li {
+  margin-bottom: 0.3rem;
+}
+
+/* --- Contact Section --- */
+.contact-section p {
+  margin-bottom: 2.5rem; /* More space before links */
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.contact-links {
+  list-style: none;
+  padding: 0;
+  display: flex; /* Arrange links horizontally */
+  justify-content: center; /* Center the links */
+  gap: 2rem; /* Space between links */
+  flex-wrap: wrap; /* Wrap if needed */
+}
+
+.contact-links li {
+  margin-bottom: 1rem;
+}
+
+.contact-links a {
+  color: #007bff; /* Primary color */
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.2rem; /* Larger contact links */
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent; /* Underline preparation */
+}
+
+.contact-links a:hover {
+  color: #0056b3; /* Darker blue */
+  border-bottom-color: #0056b3; /* Show underline on hover */
+}
+
+/* --- Footer --- */
+footer {
+  background-color: #343a40;
+  color: #adb5bd;
+  text-align: center;
+  padding: 2rem 0; /* Increased padding */
+  margin-top: auto;
+  font-size: 0.95rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+  .timeline::before {
+    left: 10px; /* Adjust line position */
+  }
+  .timeline-item {
+    padding-left: 40px; /* Adjust item padding */
+  }
+  .timeline-item::before {
+    left: 2px; /* Adjust dot position */
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 65px; /* Adjust offset */
+  }
+
+  main {
+    margin-top: 65px; /* Adjust based on smaller navbar */
+  }
+
+  .navbar {
+    padding: 0.8rem 0; /* Slightly smaller padding */
+  }
+
+  .nav-menu {
+    top: 65px; /* Position below navbar */
+    left: -100%;
+    position: fixed;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    transition: left 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    padding: 1.2rem 0; /* More padding for touch */
+    border-bottom: 1px solid #f1f1f1;
+  }
+  .nav-item:last-child {
+    border-bottom: none;
+  }
+
+  .nav-link {
+    border-bottom: none; /* Remove bottom border in mobile menu */
+    display: block; /* Make links take full width */
+    padding-bottom: 0;
+  }
+  .nav-link:hover,
+  .nav-link.active {
+    border-bottom: none; /* Ensure no border on hover/active */
+    background-color: #f8f9fa; /* Highlight on hover/active */
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .section {
+    padding: 3rem 0; /* Reduce padding */
+  }
+
+  .section h2 {
+    font-size: 2.2rem; /* Smaller headings */
+    margin-bottom: 2.5rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .content-section {
+    padding: 0 1rem; /* Add some horizontal padding */
+  }
+
+  .timeline::before {
+    left: 10px;
+  }
+  .timeline-item {
+    padding-left: 35px;
+  }
+  .timeline-item::before {
+    left: 2px;
+    width: 14px;
+    height: 14px;
+    top: 7px;
+  }
+
+  .contact-links {
+    flex-direction: column; /* Stack contact links vertically */
+    align-items: center; /* Center align */
+    gap: 1.5rem;
+  }
+}
